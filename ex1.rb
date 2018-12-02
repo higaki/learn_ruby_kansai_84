@@ -1,9 +1,8 @@
 require_relative 'person'
 
 class Person
-  attr_accessor :height, :weight
-
-  protected :weight
+  attr_accessor :height
+  attr_writer   :weight
 end
 
 if $0 == __FILE__
@@ -15,7 +14,7 @@ if $0 == __FILE__
   kazuhiko.height               # => 188
   kazuhiko.weight               # => 
 end
-# ~> -:16:in `<main>': protected method `weight' called for #<Person:0x00007fd2a30102e8> (NoMethodError)
+# ~> -:15:in `<main>': undefined method `weight' for #<Person:0x00007fbcc0955e00> (NoMethodError)
 # ~> Did you mean?  weight=
 # ~>                height
 # ~>                height=
